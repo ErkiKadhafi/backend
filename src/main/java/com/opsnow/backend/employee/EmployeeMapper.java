@@ -17,6 +17,7 @@ public interface EmployeeMapper {
     @Mapping(target = "tier.tierCode", source = "tierCode")
     @Mapping(target = "department.departmentCode", source = "departmentCode")
     @Mapping(target = "location.locationCode", source = "locationCode")
+    @Mapping(target = "supervisor.empNo", source = "supervisorCode")
     Employee employeeCreateDtoToEmployee(EmployeeCreateDto employeeCreateDto);
 
     EmployeeDto employeeDto(Employee employee);

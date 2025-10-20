@@ -1,6 +1,7 @@
 package com.opsnow.backend.tier;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import com.opsnow.backend.tier.dtos.TierDto;
@@ -11,5 +12,6 @@ public interface TierMapper {
 
     TierDto toDto(Tier Tier);
 
+    @Mapping(target = "employees", ignore = true)
     Tier toEntity(TierDto TierDto);
 }
